@@ -8,3 +8,25 @@
     text-decoration: none;
     margin-top: 10px; /* 增加上方的间距 */
   }
+.rankings {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.rankings ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.rankings li {
+  margin-bottom: 10px;
+}
+
+.rankings li a {
+  display: block;
+  padding: 5px;
+  background-color: #f4f4f4;
+  text-decoration: none;
+  color: #000;
+}

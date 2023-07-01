@@ -6,7 +6,9 @@
     <meta name="description"
           content="Improve the level of music education and increase the popularization of music education.">
     <link rel="shortcut icon" type="./image/png" href="./img/图标.png"><!-- 设置网站快捷方式图标 -->
+    <link href="css/my.css" type="text/css" rel="stylesheet">
     <link rel="icon" sizes="192x192" href="./img/图标.png"> <!-- 设置网站图标 -->
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -50,7 +52,9 @@
 
 <!--中间内容-->
 <div class="container ">
+    <!--头-->
     <h1 class="fw-bolder text-center ">歌名-歌手</h1>
+    <!--介绍与开始-->
     <div class="row">
         <div class="col-2 align-items-start">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="100%"
@@ -69,25 +73,27 @@
             <button type="button" class="btn btn-primary">&nbsp;&nbsp;开始练习&nbsp;&nbsp;</button>
         </div>
     </div>
-    <div class="row mt-5">
-        <h1>练习建议</h1>
-        <div class="col-6">
-            <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the
-                other highly repetitive body text used throughout. This is an example unordered list</p>
+        <div>
+        <div class="row mt-5">
+            <h1>练习建议</h1>
+            <div class="col-6">
+                <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the
+                    other highly repetitive body text used throughout. This is an example unordered list</p>
+            </div>
         </div>
-    </div>
-    <div class="row mt-5">
-        <h1>乐谱</h1>
-        <div class="col-6">
-            <p>乐谱介绍（如果有的话）</p>
-            <img src="img/乐谱.png" class="mr-3 avatar-img rounded-circle" alt="乐谱"
-                 style="width: 800px; ">
+        <div class="row mt-5">
+            <h1>乐谱</h1>
+            <div class="col-6">
+                <p>乐谱介绍（如果有的话）</p>
+                <img src="img/乐谱.png" class="mr-3 avatar-img rounded-circle" alt="乐谱"
+                     style="width: 800px; ">
+            </div>
         </div>
-    </div>
-    <div class="row g-5 py-4">
-        <div class="col-md-8">
+<div class="container">
+    <div class="row g-6 py-4">
+        <div class="col-md-6">
             <article class="my-3" id="sizing">
-                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
                     <h1>上传文件打分</h1>
                     <a class="d-flex align-items-center" href="../forms/form-control/#sizing">信息说明文件</a>
                 </div>
@@ -112,8 +118,7 @@
                     </div>
                 </div>
             </article>
-        </div>
-        <div class="row col-12">
+
             <div class="form-check">
                 <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required="">
                 <label class="form-check-label" for="invalidCheck3">
@@ -123,12 +128,13 @@
                     You must agree before submitting.
                 </div>
             </div>
+
+            <div class="mt-4">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
         </div>
-        <div class="row col-12">
-            <button class="btn btn-primary" type="submit">Submit form</button>
-        </div>
-        <!--小榜单-->
-        <div class="col-md-4">
+
+        <div class="col-md-5">
             <div class="position-sticky" style="top: 2rem;">
                 <div class="row justify-content-center">
                     <div class="col-6">
@@ -152,6 +158,9 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+</div>
         </div>
     </div>
 </div>
