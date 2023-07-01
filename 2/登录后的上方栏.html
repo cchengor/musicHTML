@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上方栏-Free Instrumental Sparring on CCNU501.com</title>
+    <meta name="description"
+          content="Improve the level of music education and increase the popularization of music education.">
+    <link rel="shortcut icon" type="image/png" href="img/图标.png"/><!-- 设置网站快捷方式图标 -->
+    <link rel="icon" sizes="192x192" href="img/图标.png"> <!-- 设置网站图标 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="css/headers.css" type="text/css" rel="stylesheet"> <!-- 引用自己的CSS样式表 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+<!--上方栏-->
+<div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <img class="bi me-2" style="width: 70px;" role="img" src="./img/图标.png" alt="弦轨"></img>
+            <h2>弦轨</h2>
+        </a>
+
+        <ul class="nav col-12 col-md-auto mb-2 align-self-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 link-secondary">首页</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">音乐</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">课程中心</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">我的个人中心</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">会员中心</a></li>
+        </ul>
+
+        <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-outline-primary me-2">登录</button>
+            <button type="button" class="btn btn-primary">注册</button>
+        </div>
+    </header>
+</div>
+
+<!--登录后的上方栏-->
+<div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <img class="bi me-2" style="width: 70px;" role="img" src="./img/图标.png" alt="弦轨"></img>
+            <h2>弦轨</h2>
+        </a>
+
+        <ul class="nav col-12 col-md-auto mb-2 center mb-md-0">
+            <li><a href="#" class="nav-link px-2 link-secondary">首页</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">音乐</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">课程中心</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">我的个人中心</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">会员中心</a></li>
+        </ul>
+
+        <div class="col-md-3 text-end">
+            <div class="dropdown">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="./img/头像.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu text-small dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</div>
+
+</body>
+</html>
