@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Free Instrumental Sparring on CCNU501.com</title>
+    <meta name="description"
+          content="Improve the level of music education and increase the popularization of music education.">
+    <link rel="shortcut icon" type="image/png" href="../img/图标.png"/><!-- 设置网站快捷方式图标 -->
+    <link rel="icon" sizes="192x192" href="../img/图标.png"> <!-- 设置网站图标 -->
+
+    <link href="../cs/首页.css" type="text/css" rel="stylesheet"> <!-- 引用CSS样式表 -->
+</head>
+<body>
+<div id=titi> <!-- 一个带有 id="darkgreenstrip" 的 div 元素 -->
+    <div id=header_container> <!-- 一个带有 id="header_container" 的 div 元素 -->
+        <div class="header__logo-box"> <!-- 一个带有 class="header__logo-box" 的 div 元素 -->
+            <div id=logo><a href><img src="../img/图标.png" width=150 height=150></a></div>
+            <!-- 带有 id="logo" 的 div 元素，其中包含一个链接到根目录的图片 -->
+            弦轨——智能乐器陪练网站
+            <div id=searchdiv> <!-- 带有 id="searchdiv" 的 div 元素 -->
+                <form id=searchform action=data/search_fsm.asp method=get name=searchform>
+                    <!-- 一个带有 id="searchform" 的表单元素，使用GET方法提交到"/data/search_fsm.asp" -->
+                    <button type="button" id="close_search" onclick="查找函数()">
+                        <!-- 一个带有 id="close_search" 的按钮元素，点击时调用名为closeSearch的JavaScript函数 -->
+                        <span>x</span>  <!--按钮中显示的文本 -->
+                    </button>
+                    <input autocomplete="off" id=searchbox placeholder="Search" type=text name=keyword>
+                    <!-- 一个带有 id="searchbox" 的输入框元素，用于输入搜索关键字 -->
+                    <button type=submit id=searchgo>search</button> <!-- 一个带有 id="searchgo" 的提交按钮 -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

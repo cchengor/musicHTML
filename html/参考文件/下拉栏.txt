@@ -1,0 +1,30 @@
+<nav id="navnew" role="navigation">
+    
+    <label class="menu__btn" for="menu__toggle" data-btn="">
+      <span id="btnSpan"></span>
+    </label>
+<ul id="ulfornav" data="ulfornav" class="clearfix menu__box"><li><a title="instruments" href="/instruments/" aria-haspopup="true"><span>Instruments</span></a>
+<ul class="menuforward"><li><a href="/piano/">Piano</a></li><li><a href="/guitar/">Guitar</a></li>
+<li><a href="/violin/">Violin</a></li><li><a href="/flute/">Flute</a></li>
+<li><a href="/saxophone/">Saxophone</a></li><li><a href="/voice/">Voice</a></li><li><a href="/clarinet/">Clarinet</a></li>
+<li><a href="/trumpet/">Trumpet</a></li><li><a href="/instruments/  ">Other Instruments</a></li></ul></li>
+<li><a title="styles" href="/styles/" aria-haspopup="true"><span>Styles</span></a>
+<ul class="menuforward">
+<li><a href="/all/classical/sheet_music/">Classical</a></li><li><a href="/jazz/">Jazz</a></li><li><a href="/traditional/">Traditional</a></li><li><a href="/all/rock_and_pop/sheet_music/">Rock and Pop</a></li><li><a href="/all/christmas/sheet_music/">Christmas</a></li><li><a href="/world/">World</a></li><li><a href="/styles/">Other Styles</a></li></ul></li>
+
+<li><a title="artists" href="/artists/" aria-haspopup="true"><span>Artists</span></a>
+
+<ul class="menuforward"><li><a href="/bach.asp">Bach</a></li><li><a href="/beethoven.asp">Beethoven</a></li><li><a href="/mozart.asp">Mozart</a></li><li><a href="/tchaikovsky.asp">Tchaikovsky</a></li><li><a href="/joplin.asp">Scott Joplin</a></li><li><a href="/chopin.asp">Chopin</a></li><li><a href="/artists/">Other Artists</a></li></ul></li> 
+ 
+<li><a title="artists" href="/discover/" aria-haspopup="true"><span>Discover</span></a>
+<ul class="menuforward"><li><a href="/discover/very_quick_guide.asp">Very Quick Guides</a></li><li><a href="/discover/repertoire_guides.asp">Repertoire Guides</a></li><li><a href="/discover/news.asp">News</a></li><li><a href="/discover/memes.asp">Memes</a></li><li><a href="/discover/instruments.asp">Instruments</a></li><li><a href="/discover/discover.asp">Discover Music</a></li><li><a href="/discover/holidays.asp">Holidays</a></li></ul></li> 
+ 
+<li><a href="/extras/" aria-haspopup="true"><span>Resources</span></a><ul class="menuforward"><li><a href="/guitar_tuner/">Guitar Tuner</a></li><li><a href="/guitar_chord_chart/">Guitar Chord Chart</a></li><li><a href="/guitar_scales/">Guitar Scales</a></li><li><a href="/metronome/">Metronome</a></li><li><a href="/piano_chord_chart">Piano Chord Chart</a></li><li><a href="/theory/">Music Theory</a></li><li><a title="members" href="/members/">Members Pieces</a></li><li><a title="forums" href="/f/">Forums</a></li><li><a href="/school/whats_new.asp">Latest Additions</a></li><li><a href="/extras/">More Resources...</a></li></ul></li>
+    <li class="mobonly"><a title="guitar tuner" href="/guitar_tuner/">Guitar Tuner</a></li>
+    <li class="mobonly"><a title="guitar chord chart" href="/guitar_chord_chart/">Guitar Chord Chart</a></li>
+    <li class="mobonly"><a title="piano chord chart" href="/piano_chord_chart/">Piano Chord Chart</a></li>
+    <li class="mobonly"><a title="metronome" href="/metronome/">Metronome</a></li>
+
+</ul>
+    
+</nav>
