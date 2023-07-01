@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐首页-Free Instrumental Sparring on CCNU501.com</title>
+    <meta name="description"
+          content="Improve the level of music education and increase the popularization of music education.">
+    <link rel="shortcut icon" type="image/png" href="img/图标.png"/><!-- 设置网站快捷方式图标 -->
+    <link rel="icon" sizes="192x192" href="img/图标.png"> <!-- 设置网站图标 -->
+    <link href="css/my.css" type="text/css" rel="stylesheet"> <!-- 引用CSS样式表 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        .card {
+            width: 80%; /* 调整卡片的宽度 */
+        }
+
+        @media (max-width: 767px) {
+            .card {
+                width: 100%; /* 在小屏幕上卡片宽度为100% */
+            }
+        }
+    </style>
+</head>
+<body>
+<script src="js/bootstrap.min.js" integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim"
+        crossorigin="anonymous"></script>
+<!--上方栏-->
+<div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <img class="bi me-2" style="width: 70px;" role="img" src="./img/图标.png" alt="弦轨"></img>
+            <h2>弦轨</h2>
+        </a>
+
+        <ul class="nav col-12 col-md-auto mb-2 align-self-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 link-secondary">首页</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">音乐</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">课程中心</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">我的个人中心</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">会员中心</a></li>
+        </ul>
+
+        <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-outline-primary me-2">登录</button>
+            <button type="button" class="btn btn-primary">注册</button>
+        </div>
+    </header>
+</div>
+
+<!--搜索栏-->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search"
+                           style="width: 400px; font-size: 22px;">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit" style="width: 100px; font-size: 22px;">搜索
+                        </button> <!-- 添加style来调整宽度和字体大小 -->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--曲风-->
+<div class="album py-5 bg-light">
+    <div class="container mb-1">
+        <h4 class="display-4">曲风</h4>
+        <p>多种曲风应有尽有</p>
+    </div>
+    <div class="container">
+        <div class="carousel-row">
+            <div class="row row-cols-4 g-3 mb-4">
+                <!-- 第一行模块 -->
+                <div class="col mb-4">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <image href="img/曲风.png" width="100%" height="100%"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 style="font-size: 30px;">曲风名字</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">查看详情</button>
+                                </div>
+                                <small class="text-muted">点击量（热度）</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <image href="img/曲风.png" width="100%" height="100%"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 style="font-size: 30px;">曲风名字</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">查看详情</button>
+                                </div>
+                                <small class="text-muted">点击量（热度）</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <image href="img/曲风.png" width="100%" height="100%"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 style="font-size: 30px;">曲风名字</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">查看详情</button>
+                                </div>
+                                <small class="text-muted">点击量（热度）</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <image href="img/曲风.png" width="100%" height="100%"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 style="font-size: 30px;">曲风名字</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">查看详情</button>
+                                </div>
+                                <small class="text-muted">点击量（热度）</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-4 g-3 mb-4">
+                <!-- 第二行模块 -->
+                <div class="col mb-4">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <image href="img/曲风.png" width="100%" height="100%"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 style="font-size: 30px;">曲风名字</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">查看详情</button>
+                                </div>
+                                <small class="text-muted">点击量（热度）</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <image href="img/曲风.png" width="100%" height="100%"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 style="font-size: 30px;">曲风名字</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">查看详情</button>
+                                </div>
+                                <small class="text-muted">点击量（热度）</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <image href="img/曲风.png" width="100%" height="100%"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 style="font-size: 30px;">曲风名字</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">查看详情</button>
+                                </div>
+                                <small class="text-muted">点击量（热度）</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <image href="img/曲风.png" width="100%" height="100%"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 style="font-size: 30px;">曲风名字</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">查看详情</button>
+                                </div>
+                                <small class="text-muted">点击量（热度）</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 更多行模块 -->
+        <div class="row row-cols-4 g-3 mb-4">
+                <!-- 第一行模块 -->
+                <div class="col mb-4">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <image href="img/头像.png" width="100%" height="100%"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 style="font-size: 30px;">曲风名字</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">查看详情</button>
+                                </div>
+                                <small class="text-muted">点击量（热度）</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <image href="img/头像.png" width="100%" height="100%"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 style="font-size: 30px;">曲风名字</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">查看详情</button>
+                                </div>
+                                <small class="text-muted">点击量（热度）</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <image href="img/头像.png" width="100%" height="100%"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 style="font-size: 30px;">曲风名字</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">查看详情</button>
+                                </div>
+                                <small class="text-muted">点击量（热度）</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <image href="img/头像.png" width="100%" height="100%"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 style="font-size: 30px;">曲风名字</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">查看详情</button>
+                                </div>
+                                <small class="text-muted">点击量（热度）</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+            <div class="row row-cols-4 g-3 mb-4">
+                <!-- 第一行模块 -->
+                <div class="col mb-4">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <image href="img/头像.png" width="100%" height="100%"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 style="font-size: 30px;">曲风名字</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">查看详情</button>
+                                </div>
+                                <small class="text-muted">点击量（热度）</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-outline-primary me-2" id="prevBtn">上一页</button>
+            <button class="btn btn-outline-primary" id="nextBtn">下一页</button>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const carouselRow = document.querySelector('.carousel-row');
+        const rows = carouselRow.querySelectorAll('.row');
+
+        let currentPage = 0;
+        const maxPage = Math.ceil(rows.length / 2) - 1;
+
+        function showPage(page) {
+            rows.forEach((rowEl, index) => {
+                if (index >= page * 2 && index < (page + 1) * 2) {
+                    rowEl.style.display = 'flex';
+                } else {
+                    rowEl.style.display = 'none';
+                }
+            });
+        }
+
+        prevBtn.addEventListener('click', function () {
+            if (currentPage > 0) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        });
+
+        nextBtn.addEventListener('click', function () {
+            if (currentPage < maxPage) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        });
+
+        showPage(currentPage);
+    });
+</script>
+
+<!--歌手-->
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0">
+
+</div>
+<!--陪练建议等级-->
+<div class="container marketing mb-5">
+    <div class="container mb-1">
+        <h4 class="display-4 mt-5">陪练建议</h4>
+        <p>这是标题下的内容。</p>
+    </div>
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-3">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+                 role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#777"></rect>
+                <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+            </svg>
+            <h2 class="fw-normal">Heading</h2>
+            <p>Some representative placeholder content for the three columns of text below the carousel. This is the
+                first column.</p>
+            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-3">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+                 role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#777"></rect>
+                <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+            </svg>
+            <h2 class="fw-normal">Heading</h2>
+            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second
+                column.</p>
+            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-3">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+                 role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#777"></rect>
+                <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+            </svg>
+            <h2 class="fw-normal">Heading</h2>
+            <p>And lastly this, the third column of representative placeholder content.</p>
+            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-3">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+                 role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#777"></rect>
+                <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+            </svg>
+            <h2 class="fw-normal">Heading</h2>
+            <p>And lastly this, the third column of representative placeholder content.</p>
+            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+</div>
+<!--下方栏-->
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <img class="bi me-2" style="width: 50px;" role="img" src="img/图标.png" alt="弦轨"></img>
+            </a>
+            <span class="mb-3 mb-md-0 text-muted">© 2023 CCNU, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">更多信息</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">帮助文档</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">联系我们</a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>
+
+
+<div class="album py-5 bg-light">
+    <div class="container mb-1">
+        <h4 class="display-4">曲风</h4>
+        <p>多种曲风应有尽有</p>
+    </div>
+    <div class="container">
+        <div class="carousel-row">
+            <div class="row row-cols-4 g-3 mb-4">
+                <!-- 第一行模块 -->
+                <div class="col mb-4">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <image href="img/曲风.png" width="100%" height="100%"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 style="font-size: 30px;">曲风名字</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">查看详情</button>
+                                </div>
+                                <small class="text-muted">点击量（热度）</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-4 g-3 mb-4">
+                <!-- 第二行模块 -->
+            </div>
+            <!-- 更多行模块 -->
+        <div class="row row-cols-4 g-3 mb-4">
+                <!-- 第一行模块 -->
+        </div>
+            <div class="row row-cols-4 g-3 mb-4">
+                <!-- 第一行模块 -->
+        </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-outline-primary me-2" id="prevBtn">上一页</button>
+            <button class="btn btn-outline-primary" id="nextBtn">下一页</button>
+        </div>
+    </div>
+</div>

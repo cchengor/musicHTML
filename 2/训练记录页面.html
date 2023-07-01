@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>训练记录-Free Instrumental Sparring on CCNU501.com</title>
+    <meta name="description"
+          content="Improve the level of music education and increase the popularization of music education.">
+    <link rel="shortcut icon" type="./image/png" href="./img/图标.png"><!-- 设置网站快捷方式图标 -->
+    <link rel="icon" sizes="192x192" href="./img/图标.png"> <!-- 设置网站图标 -->
+    <link href="./css/blog.css" type="text/css" rel="stylesheet"> <!-- 引用CSS样式表 -->
+    <link href="./css/blog.rtl.css" type="text/css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
+</head>
+<body>
+<!--登录后的上方栏-->
+<div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <img class="bi me-2" style="width: 70px;" role="img" src="./img/图标.png" alt="弦轨"></img>
+            <h2>弦轨</h2>
+        </a>
+
+        <ul class="nav col-12 col-md-auto mb-2 center mb-md-0">
+            <li><a href="#" class="nav-link px-2 link-secondary">首页</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">音乐</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">课程中心</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">我的个人中心</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">会员中心</a></li>
+        </ul>
+
+        <div class="col-md-3 text-end">
+            <div class="dropdown">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    <img src="./img/头像.png" alt="mdo" width="50" height="50" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu text-small dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</div>
+
+<!--搜索栏-->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form class="form-inline">
+                <div class="input-group text-center align-items-center ">
+                    <h1 class="p-2">训练记录查询</h1>
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    <div class="input-group-append align-self-center p-2">
+                        <button class="btn btn-primary" type="submit">搜索</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 g-2">
+            <div class="row border-bottom">
+                <div class="col-4" id="pad-1" style="height: 200px; width: 200px;">
+                    <script>
+                        var chartDom = document.getElementById('pad-1');
+                        var myChart = echarts.init(chartDom);
+                        var option;
+
+                        option = {
+                            legend: {
+                                top: '5%',
+                                left: 'center'
+                            },
+                            series: [
+                                {
+                                    color: ['#F7D142'], //内圆颜色
+                                    type: 'pie',
+                                    radius: '50%',
+                                    center: ['50%', '50%'], //设置圆的位置，两个圆的位置必须一致
+                                    data: [
+                                        {
+                                            value: 100,
+                                            itemStyle: {
+                                                borderWidth: '0' // 设置内圆的描边宽度为0
+                                            }
+                                        } //只设置一个值占整圆
+                                    ],
+                                    emphasis: {
+                                        scale: false //鼠标悬停到内圆时，取消放大效果
+                                    },
+                                    animation: false, // 禁用内圆的动画效果
+                                    label: {
+                                        show: true,
+                                        normal: {
+                                            position: 'center',
+                                            formatter: function (data) {
+                                                // 设置圆饼图中间文字排版
+                                                return 82;
+                                            },
+                                            textStyle: {
+                                                fontSize: 50,
+                                                color: 'black',
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    type: 'pie',
+                                    radius: ['50%', '60%'],
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    animation: true,
+                                    startAngle: 90,
+                                    clockwise: true,
+                                    data: [
+                                        {
+                                            value: 82,
+                                            itemStyle: {
+                                                color: '#2065F7',
+                                                borderColor: 'black', // 设置外圆的边框颜色与背景颜色一致，使其消失
+                                                borderWidth: '2'// 设置外圆的描边宽度为0
+                                            }
+                                        },
+                                        {
+                                            value: 18,
+                                            itemStyle: {
+                                                color: 'white',
+                                                borderColor: 'white', // 设置外圆的边框颜色与背景颜色一致，使其消失
+                                                borderWidth: '0'// 设置外圆的描边宽度为0
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        };
+
+                        option && myChart.setOption(option);
+
+
+                    </script>
+                </div>
+                <div class="col-4 align-self-center">
+                    <div class="row">
+                        <p class="mx-auto">
+                            时间：<br/>
+                            时长：<br/>
+                            音频打分：<br/>
+                            视频打分：<br/>
+                            训练建议：。。。。。。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-4 align-self-center">
+                    <div class="row d-grid gap-3 mx-auto align-content-center justify-content-end">
+                        <button type="button" class="btn btn-primary">查看训练详情</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-bottom">
+                <div class="col-4" id="pad-2" style="height: 200px; width: 200px;">
+                    <script>
+                        var chartDom = document.getElementById('pad-2');
+                        var myChart = echarts.init(chartDom);
+                        var option;
+
+                        option = {
+                            legend: {
+                                top: '5%',
+                                left: 'center'
+                            },
+                            series: [
+                                {
+                                    color: ['#F7D142'], //内圆颜色
+                                    type: 'pie',
+                                    radius: '50%',
+                                    center: ['50%', '50%'], //设置圆的位置，两个圆的位置必须一致
+                                    data: [
+                                        {
+                                            value: 100,
+                                            itemStyle: {
+                                                borderWidth: '0' // 设置内圆的描边宽度为0
+                                            }
+                                        } //只设置一个值占整圆
+                                    ],
+                                    emphasis: {
+                                        scale: false //鼠标悬停到内圆时，取消放大效果
+                                    },
+                                    animation: false, // 禁用内圆的动画效果
+                                    label: {
+                                        show: true,
+                                        normal: {
+                                            position: 'center',
+                                            formatter: function (data) {
+                                                // 设置圆饼图中间文字排版
+                                                return 82;
+                                            },
+                                            textStyle: {
+                                                fontSize: 50,
+                                                color: 'black',
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    type: 'pie',
+                                    radius: ['50%', '60%'],
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    animation: true,
+                                    startAngle: 90,
+                                    clockwise: true,
+                                    data: [
+                                        {
+                                            value: 82,
+                                            itemStyle: {
+                                                color: '#2065F7',
+                                                borderColor: 'black', // 设置外圆的边框颜色与背景颜色一致，使其消失
+                                                borderWidth: '2'// 设置外圆的描边宽度为0
+                                            }
+                                        },
+                                        {
+                                            value: 18,
+                                            itemStyle: {
+                                                color: 'white',
+                                                borderColor: 'white', // 设置外圆的边框颜色与背景颜色一致，使其消失
+                                                borderWidth: '0'// 设置外圆的描边宽度为0
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        };
+
+                        option && myChart.setOption(option);
+
+
+                    </script>
+                </div>
+                <div class="col-4 align-self-center">
+                    <div class="row">
+                        <p class="mx-auto">
+                            时间：<br/>
+                            时长：<br/>
+                            音频打分：<br/>
+                            视频打分：<br/>
+                            训练建议：。。。。。。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-4 align-self-center">
+                    <div class="row d-grid gap-3 mx-auto align-content-center justify-content-end">
+                        <button type="button" class="btn btn-primary">查看训练详情</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-bottom">
+                <div class="col-4" id="pad-3" style="height: 200px; width: 200px;">
+                    <script>
+                        var chartDom = document.getElementById('pad-3');
+                        var myChart = echarts.init(chartDom);
+                        var option;
+
+                        option = {
+                            legend: {
+                                top: '5%',
+                                left: 'center'
+                            },
+                            series: [
+                                {
+                                    color: ['#F7D142'], //内圆颜色
+                                    type: 'pie',
+                                    radius: '50%',
+                                    center: ['50%', '50%'], //设置圆的位置，两个圆的位置必须一致
+                                    data: [
+                                        {
+                                            value: 100,
+                                            itemStyle: {
+                                                borderWidth: '0' // 设置内圆的描边宽度为0
+                                            }
+                                        } //只设置一个值占整圆
+                                    ],
+                                    emphasis: {
+                                        scale: false //鼠标悬停到内圆时，取消放大效果
+                                    },
+                                    animation: false, // 禁用内圆的动画效果
+                                    label: {
+                                        show: true,
+                                        normal: {
+                                            position: 'center',
+                                            formatter: function (data) {
+                                                // 设置圆饼图中间文字排版
+                                                return 82;
+                                            },
+                                            textStyle: {
+                                                fontSize: 50,
+                                                color: 'black',
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    type: 'pie',
+                                    radius: ['50%', '60%'],
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    animation: true,
+                                    startAngle: 90,
+                                    clockwise: true,
+                                    data: [
+                                        {
+                                            value: 82,
+                                            itemStyle: {
+                                                color: '#2065F7',
+                                                borderColor: 'black', // 设置外圆的边框颜色与背景颜色一致，使其消失
+                                                borderWidth: '2'// 设置外圆的描边宽度为0
+                                            }
+                                        },
+                                        {
+                                            value: 18,
+                                            itemStyle: {
+                                                color: 'white',
+                                                borderColor: 'white', // 设置外圆的边框颜色与背景颜色一致，使其消失
+                                                borderWidth: '0'// 设置外圆的描边宽度为0
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        };
+
+                        option && myChart.setOption(option);
+
+
+                    </script>
+                </div>
+                <div class="col-4 align-self-center">
+                    <div class="row">
+                        <p class="mx-auto">
+                            时间：<br/>
+                            时长：<br/>
+                            音频打分：<br/>
+                            视频打分：<br/>
+                            训练建议：。。。。。。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-4 align-self-center">
+                    <div class="row d-grid gap-3 mx-auto align-content-center justify-content-end">
+                        <button type="button" class="btn btn-primary">查看训练详情</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-bottom">
+                <div class="col-4" id="pad-4" style="height: 200px; width: 200px;">
+                    <script>
+                        var chartDom = document.getElementById('pad-4');
+                        var myChart = echarts.init(chartDom);
+                        var option;
+
+                        option = {
+                            legend: {
+                                top: '5%',
+                                left: 'center'
+                            },
+                            series: [
+                                {
+                                    color: ['#F7D142'], //内圆颜色
+                                    type: 'pie',
+                                    radius: '50%',
+                                    center: ['50%', '50%'], //设置圆的位置，两个圆的位置必须一致
+                                    data: [
+                                        {
+                                            value: 100,
+                                            itemStyle: {
+                                                borderWidth: '0' // 设置内圆的描边宽度为0
+                                            }
+                                        } //只设置一个值占整圆
+                                    ],
+                                    emphasis: {
+                                        scale: false //鼠标悬停到内圆时，取消放大效果
+                                    },
+                                    animation: false, // 禁用内圆的动画效果
+                                    label: {
+                                        show: true,
+                                        normal: {
+                                            position: 'center',
+                                            formatter: function (data) {
+                                                // 设置圆饼图中间文字排版
+                                                return 82;
+                                            },
+                                            textStyle: {
+                                                fontSize: 50,
+                                                color: 'black',
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    type: 'pie',
+                                    radius: ['50%', '60%'],
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    animation: true,
+                                    startAngle: 90,
+                                    clockwise: true,
+                                    data: [
+                                        {
+                                            value: 82,
+                                            itemStyle: {
+                                                color: '#2065F7',
+                                                borderColor: 'black', // 设置外圆的边框颜色与背景颜色一致，使其消失
+                                                borderWidth: '2'// 设置外圆的描边宽度为0
+                                            }
+                                        },
+                                        {
+                                            value: 18,
+                                            itemStyle: {
+                                                color: 'white',
+                                                borderColor: 'white', // 设置外圆的边框颜色与背景颜色一致，使其消失
+                                                borderWidth: '0'// 设置外圆的描边宽度为0
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        };
+
+                        option && myChart.setOption(option);
+
+
+                    </script>
+                </div>
+                <div class="col-4 align-self-center">
+                    <div class="row">
+                        <p class="mx-auto">
+                            时间：<br/>
+                            时长：<br/>
+                            音频打分：<br/>
+                            视频打分：<br/>
+                            训练建议：。。。。。。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-4 align-self-center">
+                    <div class="row d-grid gap-3 mx-auto align-content-center justify-content-end">
+                        <button type="button" class="btn btn-primary">查看训练详情</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-bottom">
+                <div class="col-4" id="pad-5" style="height: 200px; width: 200px;">
+                    <script>
+                        var chartDom = document.getElementById('pad-5');
+                        var myChart = echarts.init(chartDom);
+                        var option;
+
+                        option = {
+                            legend: {
+                                top: '5%',
+                                left: 'center'
+                            },
+                            series: [
+                                {
+                                    color: ['#F7D142'], //内圆颜色
+                                    type: 'pie',
+                                    radius: '50%',
+                                    center: ['50%', '50%'], //设置圆的位置，两个圆的位置必须一致
+                                    data: [
+                                        {
+                                            value: 100,
+                                            itemStyle: {
+                                                borderWidth: '0' // 设置内圆的描边宽度为0
+                                            }
+                                        } //只设置一个值占整圆
+                                    ],
+                                    emphasis: {
+                                        scale: false //鼠标悬停到内圆时，取消放大效果
+                                    },
+                                    animation: false, // 禁用内圆的动画效果
+                                    label: {
+                                        show: true,
+                                        normal: {
+                                            position: 'center',
+                                            formatter: function (data) {
+                                                // 设置圆饼图中间文字排版
+                                                return 82;
+                                            },
+                                            textStyle: {
+                                                fontSize: 50,
+                                                color: 'black',
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    type: 'pie',
+                                    radius: ['50%', '60%'],
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    animation: true,
+                                    startAngle: 90,
+                                    clockwise: true,
+                                    data: [
+                                        {
+                                            value: 82,
+                                            itemStyle: {
+                                                color: '#2065F7',
+                                                borderColor: 'black', // 设置外圆的边框颜色与背景颜色一致，使其消失
+                                                borderWidth: '2'// 设置外圆的描边宽度为0
+                                            }
+                                        },
+                                        {
+                                            value: 18,
+                                            itemStyle: {
+                                                color: 'white',
+                                                borderColor: 'white', // 设置外圆的边框颜色与背景颜色一致，使其消失
+                                                borderWidth: '0'// 设置外圆的描边宽度为0
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        };
+
+                        option && myChart.setOption(option);
+
+
+                    </script>
+                </div>
+                <div class="col-4 align-self-center">
+                    <div class="row">
+                        <p class="mx-auto">
+                            时间：<br/>
+                            时长：<br/>
+                            音频打分：<br/>
+                            视频打分：<br/>
+                            训练建议：。。。。。。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-4 align-self-center">
+                    <div class="row d-grid gap-3 mx-auto align-content-center justify-content-end">
+                        <button type="button" class="btn btn-primary">查看训练详情</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center pagination-lg">
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">首页</a></li>
+                        <li class="page-item"><a class="page-link" href="#">上一页</a></li>
+                        <li class="page-item"><a class="page-link" href="#">下一页</a></li>
+                        <li class="page-item"><a class="page-link" href="#">尾页</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="row justify-content-center">
+                    <div class="col-md-auto">
+                        <h4>推荐训练的榜单👇</h4>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action active"
+                               aria-current="true">榜单名字</a>
+                            <a href="#" class="list-group-item list-group-item-action">歌名-----歌手 热度</a>
+                            <a href="#" class="list-group-item list-group-item-action">歌名-----歌手 热度</a>
+                            <a href="#" class="list-group-item list-group-item-action">歌名-----歌手 热度</a>
+                            <a href="#" class="list-group-item list-group-item-action">歌名-----歌手 热度</a>
+                            <a href="#" class="list-group-item list-group-item-action">歌名-----歌手 热度</a>
+                            <a href="#" class="list-group-item list-group-item-action">歌名-----歌手 热度</a>
+                            <a href="#" class="list-group-item list-group-item-action">歌名-----歌手 热度</a>
+                            <a href="#" class="list-group-item list-group-item-action">歌名-----歌手 热度</a>
+                            <a href="#" class="list-group-item list-group-item-action">歌名-----歌手 热度</a>
+                            <a href="#" class="list-group-item list-group-item-action">歌名-----歌手 热度</a>
+                            <a href="#" class="list-group-item list-group-item-action">歌名-----歌手 热度</a>
+                            <a href="#" class="list-group-item list-group-item-action">歌名-----歌手 热度</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--下方栏-->
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <img class="bi me-2" style="width: 50px;" role="img" src="./img/图标.png" alt="弦轨"></img>
+            </a>
+            <span class="mb-3 mb-md-0 text-muted">© 2023 CCNU, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">更多信息</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">帮助文档</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">联系我们</a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>

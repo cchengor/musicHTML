@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xx课程详情-Free Instrumental Sparring on CCNU501.com</title>
+    <meta name="description"
+          content="Improve the level of music education and increase the popularization of music education.">
+    <link rel="shortcut icon" type="./image/png" href="./img/图标.png"><!-- 设置网站快捷方式图标 -->
+    <link rel="icon" sizes="192x192" href="./img/图标.png"> <!-- 设置网站图标 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<!--登录后的上方栏-->
+<div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <img class="bi me-2" style="width: 70px;" role="img" src="./img/图标.png" alt="弦轨"></img>
+            <h2>弦轨</h2>
+        </a>
+
+        <ul class="nav col-12 col-md-auto mb-2 center mb-md-0">
+            <li><a href="#" class="nav-link px-2 link-secondary">首页</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">音乐</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">课程中心</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">我的个人中心</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">会员中心</a></li>
+        </ul>
+
+        <div class="col-md-3 text-end">
+            <div class="dropdown">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    <img src="./img/头像.png" alt="mdo" width="50" height="50" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu text-small dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</div>
+
+<!--中间内容-->
+<div class="container">
+    <h1 class="fw-bolder">课程名</h1>
+    <div class="row">
+        <div class="col-md-9">
+            <!-- 左边三分之二 -->
+            <div class="embed-responsive embed-responsive-16by9">
+                <video id="myVideo" width="960" height="540" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    您的浏览器不支持 HTML5 视频。
+                </video>
+
+                <script>
+                    var video = document.getElementById("myVideo");
+                    // 添加事件监听器，当视频播放完成时调用
+                    video.addEventListener('ended', function () {
+                        console.log("视频播放完成");
+                    });
+                    // 控制视频播放/暂停的函数
+                    function togglePlayPause() {
+                        if (video.paused) {
+                            video.play();
+                        } else {
+                            video.pause();
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <!-- 右边三分之一 -->
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="row justify-content-end">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action active"
+                               aria-current="true">xx课程共6集</a>
+                            <a href="#" class="list-group-item list-group-item-action">第一集</a>
+                            <a href="#" class="list-group-item list-group-item-action">第二集</a>
+                            <a href="#" class="list-group-item list-group-item-action">第三集</a>
+                            <a href="#" class="list-group-item list-group-item-action">第一集</a>
+                            <a href="#" class="list-group-item list-group-item-action">第二集</a>
+                            <a href="#" class="list-group-item list-group-item-action">第三集</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--发表评论-->
+<div class="container">
+    <h2>发表评论</h2>
+    <div class="list-group">
+        <div class="row">
+            <div class="col-md-8 mb-3">
+                <form>
+                    <div class="form-group mb-2">
+                        <label for="username">用户名：</label>
+                        <input type="text" class="form-control" id="username" placeholder="请输入用户名">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="comment">评论内容：</label>
+                        <textarea class="form-control" id="comment" rows="3" placeholder="请输入评论内容"></textarea>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">提交评论</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--评论区-->
+<div class="container">
+    <h3>评论区</h3>
+    <div class="row mt-2">
+        <div class="col-md-8">
+            <div class="list-group-item mb-3"
+                 style="display: flex; align-items: flex-start; border-bottom: 1px solid #ccc;">
+                <img src="img/头像.png" class="mr-3 avatar-img rounded-circle" alt="用户头像"
+                     style="width: 50px; height: 50px;">
+                <div style="flex-grow: 1;">
+                    <h5 style="margin-left: 30px;">用户名2</h5>
+                    <p style="margin-left: 30px;">评论内容</p>
+                </div>
+                <small class="text-muted" style="position: absolute; bottom: 0; right: 0;">
+                    发表于：2023-06-30
+                </small>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="list-group-item mb-3"
+                 style="display: flex; align-items: flex-start; border-bottom: 1px solid #ccc;">
+                <img src="img/头像.png" class="mr-3 avatar-img rounded-circle" alt="用户头像"
+                     style="width: 50px; height: 50px;">
+                <div style="flex-grow: 1;">
+                    <h5 style="margin-left: 30px;">用户名2</h5>
+                    <p style="margin-left: 30px;">评论内容</p>
+                </div>
+                <small class="text-muted" style="position: absolute; bottom: 0; right: 0;">
+                    发表于：2023-06-30
+                </small>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="list-group-item mb-3"
+                 style="display: flex; align-items: flex-start; border-bottom: 1px solid #ccc;">
+                <img src="img/头像.png" class="mr-3 avatar-img rounded-circle" alt="用户头像"
+                     style="width: 50px; height: 50px;">
+                <div style="flex-grow: 1;">
+                    <h5 style="margin-left: 30px;">用户名2</h5>
+                    <p style="margin-left: 30px;">评论内容</p>
+                </div>
+                <small class="text-muted" style="position: absolute; bottom: 0; right: 0;">
+                    发表于：2023-06-30
+                </small>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="list-group-item mb-3"
+                 style="display: flex; align-items: flex-start; border-bottom: 1px solid #ccc;">
+                <img src="img/头像.png" class="mr-3 avatar-img rounded-circle" alt="用户头像"
+                     style="width: 50px; height: 50px;">
+                <div style="flex-grow: 1;">
+                    <h5 style="margin-left: 30px;">用户名2</h5>
+                    <p style="margin-left: 30px;">评论内容</p>
+                </div>
+                <small class="text-muted" style="position: absolute; bottom: 0; right: 0;">
+                    发表于：2023-06-30
+                </small>
+            </div>
+        </div>
+    </div>
+
+    <!--调整翻页-->
+    <div class="bd-example mt-2">
+        <nav aria-label="Standard pagination example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">«</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">»</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<!--下方栏-->
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <img class="bi me-2" style="width: 50px;" role="img" src="./img/图标.png" alt="弦轨"></img>
+            </a>
+            <span class="mb-3 mb-md-0 text-muted">© 2023 CCNU, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">更多信息</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">帮助文档</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">联系我们</a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>
