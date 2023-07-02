@@ -555,7 +555,7 @@
                              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                              preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <image href="img/曲风.png" width="100%" height="100%"/>
+                            <image href="img/头像.png" width="100%" height="100%"/>
                         </svg>
                         <div class="card-body">
                             <h6 style="font-size: 30px;">歌手</h6>
@@ -574,7 +574,7 @@
                              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                              preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <image href="img/曲风.png" width="100%" height="100%"/>
+                            <image href="img/头像.png" width="100%" height="100%"/>
                         </svg>
                         <div class="card-body">
                             <h6 style="font-size: 30px;">歌手</h6>
@@ -593,7 +593,7 @@
                              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                              preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <image href="img/曲风.png" width="100%" height="100%"/>
+                            <image href="img/头像.png" width="100%" height="100%"/>
                         </svg>
                         <div class="card-body">
                             <h6 style="font-size: 30px;">歌手</h6>
@@ -612,7 +612,7 @@
                              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                              preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <image href="img/曲风.png" width="100%" height="100%"/>
+                            <image href="img/头像.png" width="100%" height="100%"/>
                         </svg>
                         <div class="card-body">
                             <h6 style="font-size: 30px;">歌手</h6>
@@ -634,26 +634,7 @@
                              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                              preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <image href="img/曲风.png" width="100%" height="100%"/>
-                        </svg>
-                        <div class="card-body">
-                            <h6 style="font-size: 30px;">歌手</h6>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">查看详情</button>
-                                </div>
-                                <small class="text-muted">点击量（热度）</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                             preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <image href="img/曲风.png" width="100%" height="100%"/>
+                            <image href="img/头像.png" width="100%" height="100%"/>
                         </svg>
                         <div class="card-body">
                             <h6 style="font-size: 30px;">歌手</h6>
@@ -711,24 +692,22 @@
     showModules();
 
     // 上一页按钮点击事件处理函数
-prevBtn.addEventListener('click', function (event) {
-    event.preventDefault(); // 阻止默认滚动行为
+    prevBtn.addEventListener('click', function (event) {
+        event.stopPropagation(); // 阻止事件冒泡
+        if (currentPage > 0) {
+            currentPage--;
+            showModules();
+        }
+    });
 
-    if (currentPage > 0) {
-        currentPage--;
-        showModules();
-    }
-});
-
-// 下一页按钮点击事件处理函数
-nextBtn.addEventListener('click', function (event) {
-    event.preventDefault(); // 阻止默认滚动行为
-
-    if (currentPage < totalPages - 1) {
-        currentPage++;
-        showModules();
-    }
-});
+    // 下一页按钮点击事件处理函数
+    nextBtn.addEventListener('click', function (event) {
+        event.stopPropagation(); // 阻止事件冒泡
+        if (currentPage < totalPages - 1) {
+            currentPage++;
+            showModules();
+        }
+    });
 </script>
 
 <!--陪练建议等级-->
