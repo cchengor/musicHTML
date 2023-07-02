@@ -2,106 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>音乐搜索-Free Instrumental Sparring on CCNU501.com</title>
-    <meta name="description"
-          content="Improve the level of music education and increase the popularization of music education.">
-    <link rel="shortcut icon" type="./image/png" href="img/图标.png"><!-- 设置网站快捷方式图标 -->
-    <link rel="icon" sizes="192x192" href="./img/图标.png"> <!-- 设置网站图标 -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-
-        .b-example-divider {
-            height: 3rem;
-            background-color: rgba(0, 0, 0, .1);
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh;
-        }
-
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor;
-        }
-
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination Example</title>
+     <link href="../css/bootstrap.min.css" rel="stylesheet"
+           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
-<!--上方栏-->
-<div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-            <img class="bi me-2" style="width: 70px;" role="img" src="./img/图标.png" alt="弦轨"></img>
-            <h2>弦轨</h2>
-        </a>
-
-        <ul class="nav col-12 col-md-auto mb-2 align-self-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 link-secondary">首页</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">音乐</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">课程中心</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">我的个人中心</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">会员中心</a></li>
-        </ul>
-
-        <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2">登录</button>
-            <button type="button" class="btn btn-primary">注册</button>
-        </div>
-    </header>
-</div>
-
-<!--搜索栏-->
-<div class="container mb-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <form class="form-inline">
-                <div class="input-group">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search"
-                           style="width: 400px; font-size: 22px;">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="submit" style="width: 100px; font-size: 22px;">搜索
-                        </button> <!-- 添加style来调整宽度和字体大小 -->
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-<!--tag标签-->
-<div class="container">
-    <h5 class="display-5">tag名</h5>
-</div>
-
-<!--歌曲搜索结果-->
-<div class="container">
-    <div class="row g-5">
-        <div class="col-md-8" >
-            <div class="container">
+    <div class="container">
         <div id="pagination-content">
             <!-- 元素将会动态添加在这里 -->
         </div>
@@ -112,7 +19,7 @@
         </ul>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <script>
         // 元素的示例数据
         const elements = [
@@ -269,48 +176,5 @@
             }
         });
     </script>
-        </div>
-        <div class="col-md-4">
-
-            <div class="position-sticky" style="top: 2rem;">
-                <div class="row justify-content-center">
-
-                    <div class="col-6">
-                        <h2>相关的标签</h2>
-                        <div class="justify-content-center">
-                            <a href="#" class="tag">标签1</a>
-                            <a href="#" class="tag">标签2</a>
-                            <a href="#" class="tag">标签3</a>
-                            <a href="#" class="tag">标签4</a>
-                            <a href="#" class="tag">标签5</a>
-                            <a href="#" class="tag">标签6</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-
-<!--下方栏-->
-<div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                <img class="bi me-2" style="width: 50px;" role="img" src="./img/图标.png" alt="弦轨"></img>
-            </a>
-            <span class="mb-3 mb-md-0 text-muted">© 2023 CCNU, Inc</span>
-        </div>
-
-        <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">更多信息</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">帮助文档</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">联系我们</a></li>
-        </ul>
-    </footer>
-</div>
 </body>
 </html>
