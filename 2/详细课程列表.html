@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>音乐搜索-Free Instrumental Sparring on CCNU501.com</title>
+    <title>详细课程列表-Free Instrumental Sparring on CCNU501.com</title>
     <meta name="description"
           content="Improve the level of music education and increase the popularization of music education.">
     <link rel="shortcut icon" type="./image/png" href="img/图标.png"><!-- 设置网站快捷方式图标 -->
@@ -108,129 +108,181 @@
     <h5 class="display-5">课程列表</h5>
 </div>
 
-<!--歌曲搜索结果-->
+<!--课程搜索结果-->
 <div class="container">
     <div class="row g-5">
-        <div class="col-md-8">
+        <div class="col-md-8" >
             <div class="container">
-                <div class="p-4 row">
-                    <div class="col-3 align-items-start">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                             preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect>
-                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                        </svg>
+        <div id="pagination-content">
+            <!-- 元素将会动态添加在这里 -->
+        </div>
+        <ul class="pagination" id="pagination">
+            <li class="page-item"><a class="page-link" href="#" id="prev">上一页</a></li>
+            <!-- 分页链接将会动态添加在这里 -->
+            <li class="page-item"><a class="page-link" href="#" id="next">下一页</a></li>
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        // 元素的示例数据
+        const elements = [
+            {
+                singer: "课程名",
+                song: "主讲人",
+                description: "标签和介绍1",
+                popularity: "热度/点击量1",
+                rating: "★ ★ ★ ★ ☆",
+                link: "www.baidu.com"
+            },
+            {
+                singer: "歌手2",
+                song: "歌名2",
+                description: "标签和介绍2",
+                popularity: "热度/点击量2",
+                rating: "★ ★ ★ ★ ☆"
+            },{
+                singer: "歌手2",
+                song: "歌名2",
+                description: "标签和介绍2",
+                popularity: "热度/点击量2",
+                rating: "★ ★ ★ ★ ☆"
+            },{
+                singer: "歌手2",
+                song: "歌名2",
+                description: "标签和介绍2",
+                popularity: "热度/点击量2",
+                rating: "★ ★ ★ ★ ☆"
+            },{
+                singer: "歌手2",
+                song: "歌名2",
+                description: "标签和介绍2",
+                popularity: "热度/点击量2",
+                rating: "★ ★ ★ ★ ☆"
+            },{
+                singer: "歌手2",
+                song: "歌名2",
+                description: "标签和介绍2",
+                popularity: "热度/点击量2",
+                rating: "★ ★ ★ ★ ☆"
+            },{
+                singer: "歌手2",
+                song: "歌名2",
+                description: "标签和介绍2",
+                popularity: "热度/点击量2",
+                rating: "★ ★ ★ ★ ☆"
+            },{
+                singer: "歌手2",
+                song: "歌名2",
+                description: "标签和介绍2",
+                popularity: "热度/点击量2",
+                rating: "★ ★ ★ ★ ☆"
+            },{
+                singer: "歌手2",
+                song: "歌名2",
+                description: "标签和介绍2",
+                popularity: "热度/点击量2",
+                rating: "★ ★ ★ ★ ☆"
+            },
+            // 添加更多元素
+        ];
 
-                    </div>
-                    <div class="col-6">
-                        <h3 class="fw-bold fs-4">课程---课程等级---主讲人</h3>
-                        <p>标签和介绍--------</p>
-                        <p>热度/点击量</p>
-                    </div>
-                </div>
-                <div class="p-4 row">
-                    <div class="col-3 align-items-start">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                             preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect>
-                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                        </svg>
+        // 根据页码显示元素的函数
+        function displayElements(page) {
 
-                    </div>
-                    <div class="col-6">
-                        <h3 class="fw-bold fs-4">歌手---歌名</h3>
-                        <p></p>
-                        <p>热度/点击量</p>
-                    </div>
+            const pageSize = 4;
+            const startIndex = (page - 1) * pageSize;
+            const endIndex = page * pageSize;
 
-                </div>
-                <div class="p-4 row">
-                    <div class="col-3 align-items-start">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                             preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect>
-                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                        </svg>
+            const paginationContent = document.getElementById("pagination-content");
+            paginationContent.innerHTML = "";
 
-                    </div>
-                    <div class="col-6">
-                        <h3 class="fw-bold fs-4">歌手---歌名</h3>
-                        <p>标签和介绍--------</p>
-                        <p>热度/点击量</p>
-                    </div>
+            for (let i = startIndex; i < endIndex && i < elements.length; i++) {
+                const element = elements[i];
 
-                </div>
-                <div class="p-4 row">
-                    <div class="col-3 align-items-start">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                             preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect>
-                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                        </svg>
+                const html = `
+    <div class="p-4 row">
+        <div class="col-3 align-items-start">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                 preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
+        </div>
+        <div class="col-6">
+            <h3 class="fw-bold fs-4">${element.singer}---${element.song}</h3>
+            <p>${element.description}</p>
+            <p>${element.popularity}</p>
+        </div>
+        <div class="col-3 align-self-center justify-content-center">
+            <h3 class="fw-bold fs-4">用户打分</h3>
+            <p>${element.rating}</p>
+            <a href="${element.link}" class="btn btn-primary">点击跳转</a>
+        </div>
+    </div>
+`;
 
-                    </div>
-                    <div class="col-6">
-                        <h3 class="fw-bold fs-4">歌手---歌名</h3>
-                        <p>标签和介绍--------</p>
-                        <p>热度/点击量</p>
-                    </div>
+                paginationContent.insertAdjacentHTML("beforeend", html);
+            }
+        }
 
-                </div>
-                <div class="p-4 row">
-                    <div class="col-3 align-items-start">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                             preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect>
-                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                        </svg>
+        // 更新分页链接的函数
+        function updatePaginationLinks(page) {
+            const pagination = document.getElementById("pagination");
+            pagination.innerHTML = "";
 
-                    </div>
-                    <div class="col-6">
-                        <h3 class="fw-bold fs-4">歌手---歌名</h3>
-                        <p>标签和介绍--------</p>
-                        <p>热度/点击量</p>
-                    </div>
+            const totalPages = Math.ceil(elements.length / 4);
 
-                </div>
-                <div class="p-4 row">
-                    <div class="col-3 align-items-start">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                             preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect>
-                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                        </svg>
+            let prevDisabled = page === 1 ? "disabled" : "";
+            let nextDisabled = page === totalPages ? "disabled" : "";
 
-                    </div>
-                    <div class="col-6">
-                        <h3 class="fw-bold fs-4">歌手---歌名</h3>
-                        <p>标签和介绍--------</p>
-                        <p>热度/点击量</p>
-                    </div>
+            let html = `
+                <li class="page-item ${prevDisabled}"><a class="page-link" href="#" id="prev">上一页</a></li>
+            `;
+            pagination.insertAdjacentHTML("beforeend", html);
 
-                </div>
-            </div>
+            for (let i = 1; i <= totalPages; i++) {
+                let active = i === page ? "active" : "";
+                html = `
+                    <li class="page-item ${active}"><a class="page-link" href="#" id="page-${i}">${i}</a></li>
+                `;
+                pagination.insertAdjacentHTML("beforeend", html);
+            }
 
-            <div>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center pagination-lg">
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">首页</a></li>
-                        <li class="page-item"><a class="page-link" href="#">上一页</a></li>
-                        <li class="page-item"><a class="page-link" href="#">下一页</a></li>
-                        <li class="page-item"><a class="page-link" href="#">尾页</a></li>
-                    </ul>
-                </nav>
-            </div>
+            html = `
+                <li class="page-item ${nextDisabled}"><a class="page-link" href="#" id="next">下一页</a></li>
+            `;
+            pagination.insertAdjacentHTML("beforeend", html);
+        }
+
+        // 初始显示第一页的元素
+        const initialPage = 1;
+        displayElements(initialPage);
+        updatePaginationLinks(initialPage);
+
+        // 分页链接的事件监听器
+        $("#pagination").on("click", "a", function(e) {
+            e.preventDefault();
+            const id = $(this).attr("id");
+
+            if (id === "prev") {
+                const currentPage = $(".page-item.active a").text();
+                const page = parseInt(currentPage) - 1;
+                displayElements(page);
+                updatePaginationLinks(page);
+            } else if (id === "next") {
+                const currentPage = $(".page-item.active a").text();
+                const page = parseInt(currentPage) + 1;
+                displayElements(page);
+                updatePaginationLinks(page);
+            } else {
+                const page = parseInt(id.split("-")[1]);
+                displayElements(page);
+                updatePaginationLinks(page);
+            }
+        });
+    </script>
         </div>
         <div class="col-md-4">
 
@@ -253,7 +305,6 @@
 
         </div>
     </div>
-
 </div>
 
 <!--下方栏-->

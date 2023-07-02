@@ -8,6 +8,12 @@
     <link rel="shortcut icon" type="./image/png" href="./img/图标.png"><!-- 设置网站快捷方式图标 -->
     <link rel="icon" sizes="192x192" href="./img/图标.png"> <!-- 设置网站图标 -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .avatar-img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
 </head>
 
 <body>
@@ -195,94 +201,165 @@
 <!--评论区-->
 <div class="container">
     <h3>评论区</h3>
-    <div class="row mt-2">
+    <div class="row g-5 mt-2">
         <div class="col-md-8">
-            <div class="list-group-item mb-3"
-                 style="display: flex; align-items: flex-start; border-bottom: 1px solid #ccc;">
-                <img src="img/头像.png" class="mr-3 avatar-img rounded-circle" alt="用户头像"
-                     style="width: 50px; height: 50px;">
-                <div style="flex-grow: 1;">
-                    <h5 style="margin-left: 30px;">用户名2</h5>
-                    <p style="margin-left: 30px;">评论内容</p>
+            <div class="container">
+                <div id="pagination-content">
+                    <!-- 动态添加的评论元素将会在这里 -->
                 </div>
-                <small class="text-muted" style="position: absolute; bottom: 0; right: 0;">
-                    发表于：2023-06-30
-                </small>
+                <ul class="pagination" id="pagination">
+                    <li class="page-item"><a class="page-link" href="#" id="prev">上一页</a></li>
+                    <!-- 分页链接将会动态添加在这里 -->
+                    <li class="page-item"><a class="page-link" href="#" id="next">下一页</a></li>
+                </ul>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8">
-            <div class="list-group-item mb-3"
-                 style="display: flex; align-items: flex-start; border-bottom: 1px solid #ccc;">
-                <img src="img/头像.png" class="mr-3 avatar-img rounded-circle" alt="用户头像"
-                     style="width: 50px; height: 50px;">
-                <div style="flex-grow: 1;">
-                    <h5 style="margin-left: 30px;">用户名2</h5>
-                    <p style="margin-left: 30px;">评论内容</p>
-                </div>
-                <small class="text-muted" style="position: absolute; bottom: 0; right: 0;">
-                    发表于：2023-06-30
-                </small>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8">
-            <div class="list-group-item mb-3"
-                 style="display: flex; align-items: flex-start; border-bottom: 1px solid #ccc;">
-                <img src="img/头像.png" class="mr-3 avatar-img rounded-circle" alt="用户头像"
-                     style="width: 50px; height: 50px;">
-                <div style="flex-grow: 1;">
-                    <h5 style="margin-left: 30px;">用户名2</h5>
-                    <p style="margin-left: 30px;">评论内容</p>
-                </div>
-                <small class="text-muted" style="position: absolute; bottom: 0; right: 0;">
-                    发表于：2023-06-30
-                </small>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8">
-            <div class="list-group-item mb-3"
-                 style="display: flex; align-items: flex-start; border-bottom: 1px solid #ccc;">
-                <img src="img/头像.png" class="mr-3 avatar-img rounded-circle" alt="用户头像"
-                     style="width: 50px; height: 50px;">
-                <div style="flex-grow: 1;">
-                    <h5 style="margin-left: 30px;">用户名2</h5>
-                    <p style="margin-left: 30px;">评论内容</p>
-                </div>
-                <small class="text-muted" style="position: absolute; bottom: 0; right: 0;">
-                    发表于：2023-06-30
-                </small>
-            </div>
-        </div>
-    </div>
-
-    <!--调整翻页-->
-    <div class="bd-example mt-2">
-        <nav aria-label="Standard pagination example">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">«</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">»</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    // 元素的示例数据
+    const comments = [
+        {
+            username: "用户名1",
+            content: "评论内容1",
+            date: "2023-06-30"
+        },
+        {
+            username: "用户名1",
+            content: "胜多负少",
+            date: "2023-06-30"
+        },
+        {
+            username: "用户名1",
+            content: "评论内容1",
+            date: "2023-06-30"
+        },
+        {
+            username: "水电费",
+            content: "评论内容1",
+            date: "2023-06-30"
+        },
+        {
+            username: "用户名1",
+            content: "按时佛挡杀佛",
+            date: "2023-06-30"
+        },
+        {
+            username: "啊发发诉讼费",
+            content: "评论内容1",
+            date: "2023-06-30"
+        },
+        {
+            username: "用户名1",
+            content: "啊啊啊啊啊",
+            date: "2023-06-30"
+        },
+        {
+            username: "用户名1",
+            content: "评论内容收到1",
+            date: "2023-06-30"
+        },
+        {
+            username: "用户名1",
+            content: " 都是",
+            date: "2023-06-30"
+        },
+        {
+            username: "用户名1",
+            content: "啊啊啊啊啊",
+            date: "2023-06-30"
+        },
+        // 添加更多评论
+    ];
+
+    // 根据页码显示评论的函数
+    function displayComments(page) {
+        const commentsPerPage = 4;
+        const startIndex = (page - 1) * commentsPerPage;
+        const endIndex = page * commentsPerPage;
+
+        const paginationContent = document.getElementById("pagination-content");
+        paginationContent.innerHTML = "";
+
+        for (let i = startIndex; i < endIndex && i < comments.length; i++) {
+            const comment = comments[i];
+
+            const html = `
+                <div class="list-group-item mb-3" style="display: flex; align-items: flex-start; border-bottom: 1px solid #ccc;">
+                    <img src="img/头像.png" class="mr-3 avatar-img rounded-circle" alt="用户头像">
+                    <div style="flex-grow: 1;">
+                        <h5 style="margin-left: 30px;">${comment.username}</h5>
+                        <p style="margin-left: 30px;">${comment.content}</p>
+                    </div>
+                    <small class="text-muted" style="position: absolute; bottom: 0; right: 0;">
+                        发表于：${comment.date}
+                    </small>
+                </div>
+            `;
+
+            paginationContent.insertAdjacentHTML("beforeend", html);
+        }
+    }
+
+    // 更新分页链接的函数
+    function updatePaginationLinks(page) {
+        const pagination = document.getElementById("pagination");
+        pagination.innerHTML = "";
+
+        const totalPages = Math.ceil(comments.length / 4);
+
+        let prevDisabled = page === 1 ? "disabled" : "";
+        let nextDisabled = page === totalPages ? "disabled" : "";
+
+        let html = `
+            <li class="page-item ${prevDisabled}"><a class="page-link" href="#" id="prev">上一页</a></li>
+        `;
+        pagination.insertAdjacentHTML("beforeend", html);
+
+        for (let i = 1; i <= totalPages; i++) {
+            let active = i === page ? "active" : "";
+            html = `
+                <li class="page-item ${active}"><a class="page-link" href="#" id="page-${i}">${i}</a></li>
+            `;
+            pagination.insertAdjacentHTML("beforeend", html);
+        }
+
+        html = `
+            <li class="page-item ${nextDisabled}"><a class="page-link" href="#" id="next">下一页</a></li>
+        `;
+        pagination.insertAdjacentHTML("beforeend", html);
+    }
+
+    // 初始显示第一页的评论
+    const initialPage = 1;
+    displayComments(initialPage);
+    updatePaginationLinks(initialPage);
+
+    // 分页链接的事件监听器
+    $("#pagination").on("click", "a", function(e) {
+        e.preventDefault();
+        const id = $(this).attr("id");
+
+        if (id === "prev") {
+            const currentPage = $(".page-item.active a").text();
+            const page = parseInt(currentPage) - 1;
+            displayComments(page);
+            updatePaginationLinks(page);
+        } else if (id === "next") {
+            const currentPage = $(".page-item.active a").text();
+            const page = parseInt(currentPage) + 1;
+            displayComments(page);
+            updatePaginationLinks(page);
+        } else {
+            const page = parseInt(id.split("-")[1]);
+            displayComments(page);
+            updatePaginationLinks(page);
+        }
+    });
+</script>
 
 
 <!--下方栏-->
